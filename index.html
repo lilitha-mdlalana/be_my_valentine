@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div id="flip-card">
+      <div id="flip-card-inner">
+        <div id="flip-card-front">
+          <div id="playlist_code">
+            <img src="/images/playlist.svg" />
+          </div>
+          <div id="Name">Jane Doe</div>
+        </div>
+        <div id="flip-card-back">
+          <div class="lid" id="one">
+            <p id="senderName">John Doe</p>
+          </div>
+          <div class="lid" id="two"></div>
+          <div id="envelope"></div>
+          <div id="letter">
+            <img width="150px" height="150px" src="/images/kissing_penguins.webp" />
+            <p id="message">
+                My Dearest Jane,
+
+              <br />
+              <br />
+              <br />
+              <span
+                style="
+                  margin: 20px;
+                  font-size: 32px;
+                  font-style: italic;
+                  font-family: 'Times New Roman', Times, serif;
+                  font-weight: 10;
+                "
+              >
+                Will you be my Valentine?
+              </span>
+            </p>
+            <div class="button-container">
+              <button id="yesButton" onclick="yesResponse()">
+                Yes, my love!
+              </button>
+              <button id="noButton" onclick="noResponse()">
+                No, I don't love you.
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thank You Overlay -->
+    <div id="thankYouOverlay">
+      <div class="thank-you-content">
+        <div class="heart-animation">💕</div>
+        <h1 class="thank-you-title">Yay! I knew it!</h1>
+        <p class="thank-you-message">
+          You've made me the happiest person in the world! 
+        </p>
+        <p class="thank-you-message">
+          I can't wait to spend Valentine's Day with you! 💖 <br>  - John Doe
+        </p>
+        <div class="animated-hearts">
+          <span class="floating-heart">❤️</span>
+          <span class="floating-heart">💗</span>
+          <span class="floating-heart">💕</span>
+          <span class="floating-heart">💖</span>
+          <span class="floating-heart">💝</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
