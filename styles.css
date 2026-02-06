@@ -13,7 +13,7 @@ body {
   max-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #EEE5BF;
+  background: #eee5bf;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
@@ -48,18 +48,18 @@ body {
 }
 
 #flip-card-front {
-  background-color: #C20114;
+  background-color: #c20114;
   color: black;
   display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
 }
 
 #flip-card-back {
   color: white;
   transform: rotateY(180deg);
-  background-color: #C20114;
+  background-color: #c20114;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -71,12 +71,12 @@ body {
   top: 0px;
   width: 100%;
   height: 100%;
-  background-color: #FAEBD7;
+  background-color: #faebd7;
   background-position: right;
   background-repeat: no-repeat;
   border-radius: 1px;
   padding: 10px;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   border-radius: 5px;
 }
 
@@ -89,9 +89,9 @@ body {
   left: 0;
 
   border-top: 200px solid transparent;
-  border-right: 200px solid #C20114;
-  border-left: 200px solid #C20114;
-  border-bottom: 300px solid  #C20114;
+  border-right: 200px solid #c20114;
+  border-left: 200px solid #c20114;
+  border-bottom: 300px solid #c20114;
 
   z-index: 3;
 }
@@ -110,7 +110,7 @@ body {
 }
 
 #one {
-  border-top: 200px solid #C20114;
+  border-top: 200px solid #c20114;
   transform: rotateX(0deg);
   z-index: 3;
 }
@@ -125,11 +125,13 @@ body {
   position: absolute;
   top: 80px;
   flex: 0;
+  display: none;
 }
 
 #playlist_code img {
   float: right;
   width: 150px;
+  display: none;
 }
 
 #Name {
@@ -159,8 +161,8 @@ body {
   left: 0;
   right: 0;
   margin: 0 20px;
-  font-size: 20px;
-  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
   font-weight: 100;
   letter-spacing: 2px;
   text-align: center;
@@ -192,27 +194,31 @@ body {
   font-size: 16px;
   border: none;
   border-radius: 6px;
-  background: #C20114;
+  background: #c20114;
   color: #fff;
   cursor: pointer;
-  transition: left 0.25s ease, top 0.25s ease, transform 0.15s ease, width 0.18s ease;
+  transition:
+    left 0.25s ease,
+    top 0.25s ease,
+    transform 0.15s ease,
+    width 0.18s ease;
   display: inline-block;
 }
 
-button{
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
-    border: none;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #yesButton {
@@ -224,7 +230,7 @@ button:hover {
 }
 
 #noButton {
-  background: #C20114;
+  background: #c20114;
 }
 
 #noButton:hover {
@@ -233,9 +239,16 @@ button:hover {
 
 /* Shake animation for No button */
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
 }
 
 /* Thank You Overlay */
@@ -270,7 +283,7 @@ button:hover {
 
 .thank-you-title {
   font-size: 64px;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   margin-bottom: 30px;
   animation: fadeInDown 0.8s ease-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -278,7 +291,7 @@ button:hover {
 
 .thank-you-message {
   font-size: 28px;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   margin: 15px 0;
   animation: fadeIn 1s ease-out;
   line-height: 1.6;
@@ -319,13 +332,16 @@ button:hover {
 
 /* Animations */
 @keyframes heartBeat {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
-  10%, 30% {
+  10%,
+  30% {
     transform: scale(1.1);
   }
-  20%, 40% {
+  20%,
+  40% {
     transform: scale(0.95);
   }
 }
@@ -362,7 +378,8 @@ button:hover {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -389,5 +406,74 @@ button:hover {
 
   .heart-animation {
     font-size: 80px;
+  }
+}
+
+/* Desktop view notice styles - Full screen overlay */
+#desktopNotice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  z-index: 10000;
+  font-size: 18px;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.desktop-notice-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  text-align: center;
+}
+
+#desktopNotice p {
+  margin: 0;
+  font-size: clamp(16px, 4vw, 24px);
+  line-height: 1.6;
+  color: #faebd7;
+}
+
+#desktopNotice button {
+  background: #c20114;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#desktopNotice button:hover {
+  background: #fff;
+  color: #c20114;
+  transform: scale(1.05);
+}
+
+/* Only show the notice on narrow screens */
+@media (max-width: 900px) {
+  #desktopNotice {
+    display: flex;
+  }
+}
+
+/* Hide for large screens explicitly */
+@media (min-width: 900px) {
+  #desktopNotice {
+    display: none !important;
   }
 }

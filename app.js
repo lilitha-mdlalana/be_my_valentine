@@ -228,6 +228,34 @@ document.addEventListener("DOMContentLoaded", () => {
       if (tryAttach()) clearInterval(attachInterval);
     }, 250);
   }
-  // Start the animation automatically once the DOM is ready
-  startAnimation();
+  // Desktop view notice logic
+  const desktopNotice = document.getElementById("desktopNotice");
+  const noticeClose = document.getElementById("desktopNoticeClose");
+
+  const shouldShowNotice = () => {
+    if (!desktopNotice) return;
+    const dismissed = localStorage.getItem("desktopNoticeDismissed");
+    if (dismissed === "true") {
+      desktopNotice.style.display = "none";
+      return;
+    }
+    if (window.innerWidth >= 900) {
+      desktopNotice.style.display = "none";
+      return;
+    }
+    desktopNotice.style.display = "flex";
+  };
+
+  if (noticeClose) {
+    noticeClose.addEventListener("click", () => {
+      localStorage.setItem("desktopNoticeDismissed", "true");
+      if (desktopNotice) desktopNotice.style.display = "none";
+    });
+  }
+
+  shouldShowNotice();
+  window.addEventListener("resize", shouldShowNotice);
+
+  // Start the animation on any click in the DOM
+  document.addEventListener("click", startAnimation, { once: true });
 });

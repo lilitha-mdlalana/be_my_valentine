@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,12 +7,21 @@
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
+    <!-- Desktop view notice (shown on small screens) -->
+    <div
+      id="desktopNotice"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Desktop view recommended"
+    >
+      <div class="desktop-notice-inner">
+        <p>This site is best viewed on desktop for the full experience.</p>
+        <button id="desktopNoticeClose">View anyway</button>
+      </div>
+    </div>
     <div id="flip-card">
       <div id="flip-card-inner">
         <div id="flip-card-front">
-          <div id="playlist_code">
-            <img src="/images/playlist.svg" />
-          </div>
           <div id="Name">Jane Doe</div>
         </div>
         <div id="flip-card-back">
@@ -22,10 +31,13 @@
           <div class="lid" id="two"></div>
           <div id="envelope"></div>
           <div id="letter">
-            <img width="150px" height="150px" src="/images/kissing_penguins.webp" />
+            <img
+              width="150px"
+              height="150px"
+              src="/images/kissing_penguins.webp"
+            />
             <p id="message">
-                My Dearest Jane,
-
+              My Dearest Jane,
               <br />
               <br />
               <br />
@@ -34,7 +46,7 @@
                   margin: 20px;
                   font-size: 32px;
                   font-style: italic;
-                  font-family: 'Times New Roman', Times, serif;
+                  font-family: &quot;Times New Roman&quot;, Times, serif;
                   font-weight: 10;
                 "
               >
@@ -60,10 +72,8 @@
         <div class="heart-animation">💕</div>
         <h1 class="thank-you-title">Yay! I knew it!</h1>
         <p class="thank-you-message">
-          You've made me the happiest person in the world! 
-        </p>
-        <p class="thank-you-message">
-          I can't wait to spend Valentine's Day with you! 💖 <br>  - John Doe
+          I can't wait to spend Valentine's Day with you! 💖 <br />
+          - John Doe
         </p>
         <div class="animated-hearts">
           <span class="floating-heart">❤️</span>
